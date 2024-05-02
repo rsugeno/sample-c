@@ -19,7 +19,7 @@ main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    // 少なくともXFSでは, ファイル内容を変更した時にbtimeが1変更されるため注意.
+    // 少なくともXFSでは, ファイル内容を変更した時にbtimeが変更されるため注意.
     time_t tv_sec = (time_t)st.stx_btime.tv_sec;
     printf("btime: %s", ctime(&tv_sec));
 
